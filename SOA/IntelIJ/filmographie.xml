@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE filmographie SYSTEM "filmographie.dtd">
+<filmographie>
+    <film>
+        <titre>film 1</titre>
+        <realisateur>Realisateur 1</realisateur>
+        <annee>2024</annee>
+        <genre>Drama</genre>
+        <acteurs>
+            <acteur>Acteur 1</acteur>
+            <acteur>Acteur 2</acteur>
+        </acteurs>
+        <description>resume film 1 ...</description>
+        <rating>
+            <imdb>8.3</imdb>
+            <rotten-tomatos>4.2</rotten-tomatos>
+        </rating>
+    </film>
+    <film>
+        <titre>film 2</titre>
+        <realisateur>Realisateur 2</realisateur>
+        <annee>2021</annee>
+        <genre>Action</genre>
+        <acteurs>
+            <acteur>Acteur 3</acteur>
+            <acteur>Acteur 4</acteur>
+        </acteurs>
+        <description>resume film 2 ...</description>
+        <rating>
+            <imdb>8.3</imdb>
+            <rotten-tomatos>4.2</rotten-tomatos>
+        </rating>
+    </film>
+</filmographie>

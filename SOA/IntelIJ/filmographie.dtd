@@ -1,0 +1,12 @@
+<!ELEMENT filmographie (film*)>
+<!ELEMENT film (titre, realisateur, annee, genre, acteurs, description, rating)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT realisateur (#PCDATA)>
+<!ELEMENT annee (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT acteurs (acteur+)>
+<!ELEMENT acteur (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT rating (imdb,rotten-tomatos)>
+<!ELEMENT imdb (#PCDATA)>
+<!ELEMENT rotten-tomatos (#PCDATA)>

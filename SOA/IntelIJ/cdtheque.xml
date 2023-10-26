@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE cdtheque SYSTEM "cdtheque.dtd">
+<cdtheque date="2024-10-28" auteur="ACDC">
+    <cd>
+        <titre>Album 1</titre>
+        <artiste>Artiste 1</artiste>
+        <style>Rock</style>
+    </cd>
+    <cd>
+        <titre>Album 2</titre>
+        <artiste>Artiste 2</artiste>
+    </cd>
+</cdtheque>
