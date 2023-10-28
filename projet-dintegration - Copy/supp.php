@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bind_param("ss", $option, $département);
 
             if ($stmt->execute()) {
-                header("Location: home.php");
+                header("Location:home.php");
             } else {
                 echo "Error deleting record: " . $stmt->error;
             }

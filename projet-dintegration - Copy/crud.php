@@ -9,6 +9,7 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
     if (isset($_POST['create'])) {
         $option = $_POST['Option'];
         $département = $_POST['Département'];

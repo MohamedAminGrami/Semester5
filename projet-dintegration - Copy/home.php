@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
     <title>List of Items</title>
 </head>
 <body>
 <h1>List of Items</h1>
-<a href='creer.php' class='btnC'><button type='submit'>Create an Option</button></a>
-<form action="crud.php" method="POST" class="form_filter">
+<a href='creer.php'><button type='submit' class='btnC'>Create an Option</button></a>
+<form action="home.php" method="GET" class="form_filter">
     <label for="filterOption">Filter by Option:</label>
     <select name="filterOption" id="filterOption">
         <option value="">All</option>
@@ -31,7 +31,7 @@
     <input type="radio" name="order" value="CodeOption" id="orderCodeOption">
     <br/>
 
-    <button type="submit" name="filter" value="Apply Filters">Apply Filters</button>
+    <button type="submit">Apply Filters</button>
 </form>
 
 <?php
@@ -47,20 +47,19 @@ if ($conn->connect_error) {
 }
 
 $sql = 'SELECT `Option`, `Département`, `OptionAraB`, `CodeOption` FROM Options ';
-if (isset($_POST['filter'])) {
+if (!empty($_GET['filterOption']) || !empty($_GET['filterDepartment'])) {
+    $sql .= 'WHERE ';
     $conditions = array();
-    if (!empty($_POST['filterOption'])) {
-        $conditions[] = '`Option` = "' . $_POST['filterOption'] . '"';
+    if (!empty($_GET['filterOption'])) {
+        $conditions[] = '`Option` = "' . $_GET['filterOption'] . '"';
     }
-    if (!empty($_POST['filterDepartment'])) {
-        $conditions[] = '`Département` = "' . $_POST['filterDepartment'] . '"';
+    if (!empty($_GET['filterDepartment'])) {
+        $conditions[] = '`Département` = "' . $_GET['filterDepartment'] . '"';
     }
-    if (count($conditions) > 0) {
-        $sql .= ' WHERE ' . implode(' AND ', $conditions);
-    }
+    $sql .= implode(' AND ', $conditions);
 }
 
-if (isset($_POST['order']) && $_POST['order'] === 'CodeOption') {
+if (isset($_GET['order']) && $_GET['order'] === 'CodeOption') {
     $sql .= ' ORDER BY CodeOption ASC';
 } else {
     $sql .= ' ORDER BY Option ASC, Département ASC';

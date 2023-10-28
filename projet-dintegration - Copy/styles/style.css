@@ -4,92 +4,21 @@ body {
     margin: 0;
     padding: 0;
 }
-.btnC{
-
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    text-decoration: none; 
-    color: inherit;
-
-}
 
 h1 {
     text-align: center;
     margin-top: 20px;
 }
 
-form {
-    background-color: #fff;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-button {
-    display: inline-block;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 3px;
-    margin-right: 10px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-th, td {
-    padding: 10px;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-.ud{
-
+.btnC {
     text-align: center;
-    display: flex;
-    justify-content: center;
-
-}
-
-.update {
-    margin-right: 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    margin: 20px auto;
 }
 
 .form_filter {
     text-align: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
@@ -101,7 +30,8 @@ th {
     margin-bottom: 10px;
 }
 
-.form_filter select {
+.form_filter select,
+.form_filter input[type="radio"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -118,9 +48,29 @@ th {
     border-radius: 3px;
 }
 
+.table_f {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table_f, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Style the "Delete" button */
 .supp {
     display: inline-block;
-    background-color: #ff0000;
+    background-color: #ff0000; /* Red background */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -129,9 +79,10 @@ th {
     margin-right: 10px;
 }
 
+/* Style the "Update" button */
 .update {
     display: inline-block;
-    background-color: #002aff;
+    background-color: #002aff; /* Blue background */
     color: #fff;
     border: none;
     padding: 10px 20px;
