@@ -7,7 +7,7 @@
     <!-- <link rel="stylesheet" href="styles/style.css"> -->
 </head>
 <body>
-    <h1>Options</h1>
+    <h1>Créer un option</h1>
     <form action="crud.php" method="POST">
         <label for="Option">Option:</label>
         <select name="Option" id="Option" required>
@@ -15,7 +15,7 @@
             <option value="Option2">Option 2</option>
             <option value="Option3">Option 3</option>
             <option value="Option4">Option 4</option>
-        </select>
+        </select><br/>
 
         <label for="Département">Département:</label>
         <select name="Département" id="Département" required>
@@ -23,14 +23,14 @@
             <option value="electrique">electrique</option>
             <option value="mechanique">mechanique</option>
             <option value="buisness">buisness</option>
-        </select>
+        </select><br/>
 
         <label for="OptionAraB">OptionAraB:</label>
         <input type="text" id="OptionAraB" name="OptionAraB" maxlength="10" required>
-        
+        <br/>
         <label for="CodeOption">CodeOption:</label>
         <input type="number" min="1" maxlength="10" id="CodeOption" name="CodeOption" required>
-        
+        <br/>
         <button type="submit" name="create" class="update">Créer</button>
         
     </form>

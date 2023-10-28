@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>List of Items</h1>
-<a href='creer.php'><button type='submit' class='btnC'>Create an Option</button></a>
+<a href='creer.php'><button type='submit' class='btnC'>Create an Option</button></a><br/>
 <form action="home.php" method="GET" class="form_filter">
     <label for="filterOption">Filter by Option:</label>
     <select name="filterOption" id="filterOption">
@@ -28,11 +28,9 @@
     </select>
 
     <label for="order">Order by CodeOption:</label>
-    <input type="radio" name="order" value="CodeOption" id="orderCodeOption">
-    <br/>
-
     <button type="submit">Apply Filters</button>
 </form>
+<br/>
 
 <?php
 $servername = "localhost";
