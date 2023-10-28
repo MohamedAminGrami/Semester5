@@ -13,16 +13,16 @@
     <label for="filterOption">Filter by Option:</label>
     <select name="filterOption" id="filterOption">
         <option value="">All</option>
-        <option value="Option1">Option 1</option>
-        <option value="Option2">Option 2</option>
-        <option value="Option3">Option 3</option>
-        <option value="Option4">Option 4</option>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+        <option value="Option 4">Option 4</option>
     </select>
     <label for="filterDepartment">Filter by Department:</label>
     <select name="filterDepartment" id="filterDepartment">
         <option value="">All</option>
         <option value="info">info</option>
-        <option value="electrique">electrique</option>
+        <option value="électrique">électrique</option>
         <option value="mechanique">mechanique</option>
         <option value="buisness">buisness</option>
     </select>
@@ -33,17 +33,7 @@
 <br/>
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "Scolarite";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+include("db_connection.php");
 $sql = 'SELECT `Option`, `Département`, `OptionAraB`, `CodeOption` FROM Options ';
 if (!empty($_GET['filterOption']) || !empty($_GET['filterDepartment'])) {
     $sql .= 'WHERE ';
